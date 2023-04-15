@@ -1,0 +1,119 @@
+:root {
+    --margin-standard: 2rem;
+    --border-standard: 2px solid black;
+    
+    --header-bg: rgba(76, 92, 104, 0.9);
+    --header-padding: 2rem;
+    --header-font-colour: rgb(176, 228, 219);
+    --header-font-size: 5rem;
+    --header-font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+    --main-font-size: 2rem;
+
+    --gameboard-max-width: 350px;
+    --gameboard-height: 350px;
+    --box-hover-colour: rgb(216, 228, 233);
+
+    --restart-button-bg: rgba(76, 92, 104, 0.8);
+    --restart-button-hover-bg: rgba(76, 92, 104, 1);
+    --restart-button-padding: 0.5rem 1rem;
+}
+
+html {
+    position: relative;
+}
+
+body {
+    text-align: center;
+    height: 100vh;
+
+    box-sizing: border-box;
+}
+
+
+header {
+    padding: var(--header-padding);
+    border-bottom: var(--border-standard);
+    margin-bottom: var(--margin-standard);
+
+    font-size: var(--header-font-size);
+    font-family: var(--header-font-family);
+
+    background-color: var(--header-bg);
+
+    color: var(--header-font-colour);
+}
+
+main {
+    font-size: var(--main-font-size);
+}
+
+.player-turn {
+    margin-bottom: var(--margin-standard);
+}
+
+.gameboard {
+    border: var(--border-standard);
+    max-width: var(--gameboard-max-width);
+    height: var(--gameboard-height);
+
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+
+    margin-bottom: calc(var(--margin-standard) / 2);
+}
+
+.box {
+    border: 1px solid black;
+    cursor: pointer;
+}
+
+.box:hover {
+    background: var(--box-hover-colour);
+}
+
+.restart {
+    margin-bottom: var(--margin-standard);
+    border: var(--border-standard);
+    background-color: var(--restart-button-bg);
+    padding: var(--restart-button-padding);
+    font-size: inherit;
+
+    border-radius: 5px;
+}
+
+.restart:hover {
+    background-color: var(--restart-button-hover-bg);
+}
+
+footer {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    padding: 10px;
+}
+
+@media (max-width: 750px){
+    :root {
+        --header-font-size: 4rem;
+
+        --gameboard-max-width: 300px;
+        --gameboard-height: 300px;
+
+        --main-font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 355px){
+    :root {
+        --header-font-size: 3rem;
+
+        --gameboard-max-width: 250px;
+        --gameboard-height: 250px;
+
+        --main-font-size: 1rem;
+    }
+}

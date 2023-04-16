@@ -13,6 +13,7 @@
     --gameboard-max-width: 350px;
     --gameboard-height: 350px;
     --box-hover-colour: rgb(216, 228, 233);
+    --box-font-size: 6rem;
 
     --restart-button-bg: rgba(76, 92, 104, 0.8);
     --restart-button-hover-bg: rgba(76, 92, 104, 1);
@@ -52,7 +53,7 @@ main {
     margin-bottom: var(--margin-standard);
 }
 
-.gameboard {
+#gameboard {
     border: var(--border-standard);
     max-width: var(--gameboard-max-width);
     height: var(--gameboard-height);
@@ -69,6 +70,9 @@ main {
 .box {
     border: 1px solid black;
     cursor: pointer;
+
+    font-size: var(--box-font-size);
+
 }
 
 .box:hover {
@@ -104,6 +108,9 @@ footer {
         --gameboard-height: 300px;
 
         --main-font-size: 1.5rem;
+
+        --box-font-size: 5rem;
+        
     }
 }
 
@@ -115,5 +122,7 @@ footer {
         --gameboard-height: 250px;
 
         --main-font-size: 1rem;
+
+        --box-font-size: 4rem;
     }
 }

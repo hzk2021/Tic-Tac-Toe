@@ -28,6 +28,7 @@ const gameBoard = (() => {
     let turn = 0;
 
     const _checkWinner = () => {
+        if (turn == 9) return "It's a draw!";
 
         let winner = '';
 
@@ -86,15 +87,18 @@ const gameBoard = (() => {
 
             _gameWinner = _checkWinner();
 
-            if (_gameWinner != '') {
-                _announceWinner(_gameWinner);
-            };
+            if (_gameWinner != '') _announceWinner(_gameWinner);
 
         }
     }
 
     const _announceWinner = (winner) => {
-        _message.textContent = `Player ${winner} has won!`;
+
+        if (winner == _playerOne.playerShape || winner == _playerTwo.playerShape)
+            _message.textContent = `Player ${winner} has won!`;
+        else
+            _message.textContent = `It's a draw!`;
+            
     }
 
     const _restartGame = () => {

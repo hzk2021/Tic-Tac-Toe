@@ -70,9 +70,8 @@ main {
 .box {
     border: 1px solid black;
     cursor: pointer;
-
     font-size: var(--box-font-size);
-
+    user-select: none;
 }
 
 .box:hover {

@@ -49,7 +49,7 @@ main {
     font-size: var(--main-font-size);
 }
 
-.player-turn {
+.message {
     margin-bottom: var(--margin-standard);
 }
 
@@ -123,4 +123,8 @@ footer {
 
         --box-font-size: 4rem;
     }
+}
+
+.win-box {
+    background-color: var(--box-hover-colour);
 }
